@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800;900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('https://app.staage.com/img/bg-not-logged.700e4d0d.png'), #000;
+    font-family: 'Inter', sans-serif;
+
+}
+
+header {
+    width: 100%;
+    padding: 10px 20px;
+    top: 0;
+    z-index: 998;
+   
+  }
+  
+  header .newNavbar {
+    max-width: 1600px;
+    margin: 0 auto;
+  
+    padding: 0 20px;
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header .logo img {
+    width: 120px;
+    margin-left: 0rem;
+  }
+  
+  
+  .menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+
+
+  
+  
+  .criarConta {
+    color: #0093dc;
+    font-weight: 600;
+    border: none;
+    background: none;
+    font-size: 1.1rem;
+    width: 100%;
+    padding: 0.4rem 2rem;
+    transition: ease-in all 0.3s;
+  }
+  
+  .criarConta:hover {
+    background: transparent;
+    color: #000;
+  }
+  
+  .menu li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #8a8a8a;
+    transition: ease-in all 0.1s;
+  }
+  
+  .menu li a:hover {
+    font-weight: 600;
+    color: #fff;
+  }
+  
+  @media screen and (min-width: 991px) and (max-width: 1199px) {
+    .menu li a {
+      padding: 0 0.8rem;
+    }
+
+  }
+  
+  @media screen and (max-width: 990px) {
+
+    header .logo img {
+        width: 100px;
+        padding-top: 1rem;
+    }
+
+    header .newNavbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .criarConta {
+        display: none;
+    }
+
+
+  
+    .menu.active {
+      right: 0;
+    }
+  }
+
+.cadastro {
+    width: 30%;
+    padding: 2rem;
+    background: rgba(255,255,255,.03);
+    color: #fff;
+    border-radius: 6px;
+    margin: 0 auto;
+    padding-top: 2rem;
+    margin-top: 5rem;
+  }
+
+.cadastro .logo {
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+.cadastro .logo img {
+  width: 30%;
+}
+
+.cadastro h1 {
+    font-size: 1.2rem;
+}
+
+.cadastro .description p {
+  font-size: .6rem;
+}
+
+
+.indicator {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 1rem;
+}
+
+.indicator .line {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 1px;
+    background: #ddd;
+    width: 100%;
+    left: 0;
+    z-index: 10;
+}
+
+.indicator p {
+    position: relative;
+    z-index: 20;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #ddd;
+    font-size: .8rem;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    border-radius: 50%;
+    transition: .3s ease-in all;
+
+}
+
+.indicator p.active {
+    border-color: #7601e0;
+    color: #7601e0;
+}
+
+.tab {
+    display: none;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.tab.show {
+    display: block;
+}
+
+.tab p {
+    margin-bottom: 18px;
+}
+
+form .tab .form {
+    margin-bottom: 18px;
+    width: 100%;
+}
+
+.tab .form input {
+    width: 100%;
+    padding: 18px;
+    border: none;
+    font-size: 1rem;
+    background: rgba(255,255,255,.1);
+    color: #fff;
+    border-radius: 4px;
+    outline: none;
+}
+
+.tab .cvv {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tab div input {
+  width: 45%;
+  padding: 14px;
+  border: none;
+  background: rgba(255,255,255,.1);
+  border-radius: 4px;
+  outline: none;
+  color: #fff;
+  font-size: 1rem;
+}
+
+
+.tab .form button .loader {
+  pointer-events: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #fff;
+  animation: an1 1s ease infinite;
+  margin-left: 1rem;
+}
+
+@keyframes an1 {
+  0% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.tab .form select {
+  width: 100%;
+  margin-top: 1rem;
+  font-size: 1rem;
+  padding: 14px;
+  border: none;
+  border-radius: 4px;
+  background: rgba(255,255,255,.1);
+  color: #fff;
+}
+
+.tab .form button {
+    width: 100%;
+    padding: 1rem;
+    border: 0;
+    background: #7601e0;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .2s ease-in all;
+}
+
+.tab .seguranca {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center;
+
+  ;
+}
+
+.tab .seguranca p {
+  font-size: .8rem;
+  color: #666;
+  margin-top: 15px;
+  padding-left: .5rem;
+}
+
+.tab .seguranca img {
+  width: 5%;
+}
+
+@media screen and (max-width: 991px) {
+  .cadastro {
+    width: 90%;
+    background: none;
+  }
+}

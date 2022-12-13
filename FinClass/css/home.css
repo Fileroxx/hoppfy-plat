@@ -1,0 +1,1153 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800;900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  background: transparent;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,.4);
+  border-radius: 10px;
+}
+
+
+
+body {
+    background-color: #000 !important;
+    font-family: 'Inter', sans-serif;
+}
+
+main .intro {
+  position: fixed;
+  z-index: 998;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background: #000;
+}
+
+main .intro .logo-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: pulse 3s linear infinite;
+}
+
+main .intro .logo-header img {
+  width: 25%;
+}
+
+@keyframes pulse{
+  0% {
+      transform: scale(1);
+      opacity: 0;
+  }
+  50% {
+      transform: scale(1.05);
+      opacity: 1;
+  }
+  100% {
+      transform:  scale(1);
+      opacity: 1;
+  }
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    margin: 0 auto;
+    transition: .5s;
+    top: 0;
+    z-index: 997;
+    border-bottom: 2px solid rgba(255,255,255,.1);
+  }
+  
+  header .newNavbar {
+  
+    transition: .5s;
+    padding-top: 2rem;
+    width: 100%;
+    margin: 0 auto !important;
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  .shadowMenu {
+    background: rgba(0,0,0,.8);
+    background-size: cover;
+    width: 100%;
+    height: 80px;
+  }
+  
+  header .logo img {
+    width: 120px;
+ 
+  }
+  
+  .hamburguer {
+    width: 30px;
+    height: 30px;
+  
+    background-color: transparent;
+    border-radius: 5px;
+    border: 0;
+  
+    position: relative;
+    cursor: pointer;
+  
+    display: none;
+  }
+  
+  .hamburguer:after {
+    content: "";
+  
+    position: absolute;
+    top: 35%;
+    left: 15%;
+  
+    width: 100%;
+    height: 4%;
+    border-radius: 5px;
+  
+    background: #fff;
+  }
+  
+  .hamburguer::before {
+    content: "";
+  
+    position: absolute;
+    top: 55%;
+    left: 15%;
+  
+    width: 100%;
+    height: 6%;
+    border-radius: 5px;
+  
+    background: #fff;
+  }
+  
+  .menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .menu li {
+    margin-left: 10px;
+  }
+
+  header .dropdown {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+  
+  }
+
+  header .ul-profile {
+    background: #272830;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-top: 1rem;
+    align-items: flex-start;
+    padding: 1.5rem;
+    color: #fff;
+    width: 20%;
+  
+  }
+
+  header .ul-profile li {
+    list-style: none;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    color: #fff;
+    display: flex;
+    border-bottom: 1px solid rgb(65, 65, 65);
+    width: 100%;
+
+    
+  }
+ 
+  header .ul-profile a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 400;
+    transition: .6s;
+  }
+
+  header .ul-profile a:hover {
+    color: #7601e0;
+  }
+
+  .selectProfile {
+    color: #fff;
+    font-size: 1.1rem;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    width: 100%;
+    font-weight: 700;
+    transition: ease-in all 0.3s;
+  }
+  
+  .menu .mobile {
+    display: none;
+  }
+  
+  .menu li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #dadada;
+    transition: ease-in all 0.1s;
+    font-weight: 600;
+  }
+  
+  .menu li a:hover {
+    
+    color: #fff;
+  }
+  
+  @media screen and (min-width: 991px) and (max-width: 1199px) {
+    .menu li a {
+      padding: 0 0.3rem;
+    }
+  }
+  
+  @media screen and (max-width: 990px) {
+
+
+  
+    .hamburguer {
+      display: block;
+      z-index: 999;
+    }
+
+    header .newNavbar img {
+      width: 30%;
+    }
+  
+    .menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+        0 100px 80px rgba(0, 0, 0, 0.12);
+      height: 100vh;
+      margin: 0;
+      background-color: #222222;
+  
+      width: 100%;
+      max-width: 400px;
+  
+      padding: 100px 20px;
+  
+      flex-direction: column;
+      transition: ease all 0.5s;
+    }
+
+    .selectProfile {
+      display: none;
+    }
+
+    .menu .mobile {
+      text-align: center;
+      display: block;
+    }
+  
+    .menu .entrar {
+      margin-top: 10rem;
+    }
+  
+    .menu.active {
+      right: 0;
+    }
+
+    header .dropdown {
+      display: none;
+    }
+
+    header .ul-profile {
+      display: none;
+    }
+
+  }
+
+  .image-container {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -6;
+    left: 0;
+    top: 0;
+  }
+
+  .image-container img {
+    width: 100%;
+    z-index: -6;
+    height: 100vh;
+    object-fit: cover;
+  }
+
+
+
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    }
+
+    .inner {
+    
+        width: 100% !important;
+        margin: 0 auto;
+        height: 100vh;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+     
+    
+     
+    }
+
+    .banner {
+        height: auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        color: #fff;
+        padding-top: 14rem;
+        width: 100%;
+        transition: .6s;
+        margin: 0 auto;
+        
+    }
+
+     .primeiro {
+      background: url('../assets/banner2.png') !important;
+      background-size: cover;
+    }
+
+    .segundo {
+      background: url('../assets/banner2.png') !important;
+      background-size: cover;
+    }
+
+    .terceiro {
+      background: url('../assets/banner2.png') !important;
+      background-size: cover;
+    }
+    
+    .banner h1 {
+        font-size: 4rem;
+    }
+
+    .banner h3 {
+        font-size: 1.2rem;
+        margin-top: 20px;
+        letter-spacing: 1px;
+        font-weight: 300;
+        text-transform: capitalize;
+    }
+
+    .banner p {
+        width: 50%;
+        padding-top: 1rem;
+        font-weight: 400;
+        font-size: 1.2rem;
+    }
+
+    .banner-button {
+        justify-content: flex-start;
+        padding: 0;
+    }
+
+    .banner .btn {
+        padding: 12px 18px;
+        font-size: 1rem;
+        margin-top: 50px;
+        margin-right: 10px;
+        color: #fff;
+        font-weight: 500;
+        border: none;
+        cursor: pointer;
+        border-radius: 3px;
+        background-color: #7601e0;
+        font-weight: 500;
+    }
+    
+    .banner p {
+        width: 40%;
+    }
+    
+    .banner .btn1 {
+        background: rgba(255,255,255,.2);
+        color: #fff;
+    }
+    
+    .menu .active {
+        border-bottom: 3px solid #7601e0;
+    
+    }
+
+    .inner .author {
+        width: 100%;
+        justify-content: flex-end;
+        align-items: flex-end;
+        text-align: end;
+        color: #fff;
+        font-weight: 300;
+    }
+
+    .inner .author img {
+        width: 3%;
+        padding-bottom: 5px;
+    }
+
+    @media screen and (max-width: 991px) {
+
+        .image-container img {
+            height: 100vh;
+            width: 100vw !important;
+        }
+
+        .inner {
+           
+            width: 100%;
+           
+        }
+
+
+        .banner {
+          width: 100%;
+          margin: 0 auto;
+          padding: 0rem;
+          padding-top: 10rem;
+        }
+
+        .banner h1 {
+            font-size: 2.5rem;
+        }
+
+        .banner p {
+            width: 100%;
+        }
+
+        .banner-button {
+          display: flex;
+        }
+
+    
+
+    }
+
+
+
+
+
+    .swiper-pagination-bullet {
+      background-color: #fff !important;
+     
+    }
+
+ 
+
+    #assistidos {
+      background-color: #000;
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 10rem;
+        padding-bottom: 40px;
+        color: #fff;
+       
+    }
+
+    #assistidos h1 {
+      padding-top: 3rem;
+      font-size: 1.5rem;
+      color: #dadada;
+    }
+
+    #assistidos h4 {
+        color: rgb(187, 187, 187);
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    #assistidos #conteudos {
+      width: 100%;
+      margin: 0 auto;
+      height: 100%;
+    }
+
+    #assistidos .aulas {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        padding-right: 3rem;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row !important;
+        justify-content: space-between;
+    }
+
+    #assistidos .progresso img {
+      width: 100%;
+      padding-right: 20px;
+      padding-bottom: 1rem;
+      border-radius: 10px;
+  } 
+
+  #assistidos .progresso .titulo h3 {
+    font-size: 1rem;
+  }
+
+  #assistidos .materiais {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  #assistidos .materiais .card-content {
+    background-color: transparent;
+    flex-direction: row;
+    display: flex;
+    margin-top: 3rem;
+    margin-right: 1rem;
+    width: 30%;
+    border-radius: 8px;
+    color: #fff;
+    margin-bottom: 4rem;
+  }
+
+  #assistidos .materiais .card-content .intro {
+    width: 21%;
+    position: absolute;
+    top: 500px;
+  }
+  
+  #assistidos .materiais .card-content:hover .intro {
+    top: 490px;
+  }
+
+  #assistidos .progresso .card-content {
+    background: transparent;
+    padding: 0rem;
+    flex-direction: row;
+    display: flex;
+    margin-top: 3rem;
+    margin-right: 1rem;
+    width: 90%;
+    border-radius: 8px;
+    color: #fff;
+    margin-bottom: 4rem;
+  }
+
+  #assistidos .progresso .card-content img {
+    width: 50%;
+    height: 10%;
+  }
+
+    #assistidos .aulas img {
+        width: 50%;
+        padding-right: 20px;
+        padding-bottom: 1rem;
+        border-radius: 10px;
+    }
+
+    #assistidos .card-content {
+      background: rgba(34, 35, 39, 0.6);
+      padding: 2rem;
+      display: flex;
+      margin-top: 3rem;
+      margin-right: 1rem;
+      width: 100%;
+      border-radius: 8px;
+      color: #fff;
+    }
+
+    #assistidos .card-content div {
+  
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    
+    #assistidos .card-content .porcentagem {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
+    }
+
+    #assistidos .card-content .porcentagem p {
+      font-size: .8rem;
+      padding-top: .8rem;
+      padding-left: .5rem;
+    }
+
+    #assistidos .card-content div .name {
+      color: #fff;
+      font-weight: 500;
+      font-size: 1rem;
+    }
+
+    #assistidos .card-content div h5 {
+      color: #f5f5f5;
+      font-weight: 300;
+      font-size: .8rem;
+    }
+
+    #assistidos .card-content .progress-area {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      
+    }
+
+    #assistidos .card-content .progress-area p {
+      padding-top: 10px;
+      font-weight: 300;
+      font-size: .8rem;
+      padding-left: 5px;
+    }
+    
+
+    #assistidos .card-content .progress-bar {
+      background: #222222;
+      height: 1vh;
+      width: 100%;
+      margin-top: 1rem;
+      border-radius: 10px;
+    }
+
+    #assistidos .card-content .buttons {
+      display: flex;
+      flex-direction: row;
+      padding-top: 1rem;
+    }
+
+    #assistidos .card-content .play {
+      background: #222222;
+      color: #fff;
+      padding: 1rem;
+      border-radius: 10px;
+      border: 0;
+      transition: .3s ease-in all;
+      cursor: pointer;
+    }
+
+    #assistidos .card-content .play:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    #assistidos .card-content .info {
+      margin-left: 1rem;
+      padding: .6rem;
+      border-radius: 10px;
+      background: rgba(255,255,255,.3);
+      color: #fff;
+      cursor: pointer;
+      transition: .3s ease-in all;
+    }
+
+    #assistidos .card-content .info:hover {
+      background: transparent;
+      border-color: #fff;
+    }
+
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+
+
+  
+
+    @media screen and (max-width: 991px) {
+
+      #assistidos {
+        padding-top: 10rem;
+      }
+
+      #assistidos h4 {
+        font-size: 1.5rem;
+      }
+
+      #assistidos .aulas {
+        display: flex;
+        flex-direction: column;
+        
+      }
+
+
+      #assistidos .progresso .card-content img {
+        display: none;
+      }
+
+      #assistidos .progresso .card-content {
+        width: 100%;
+      }
+
+      #assistidos .aulas .card-content img {
+        width: 80%;
+      }
+
+      #assistidos .aulas .card-content {
+        flex-direction: column;
+        justify-content: center !important;
+        align-items: center;
+        margin: 0;
+        padding: 2rem;
+        margin-top: 1rem;
+        width: 100%;
+      }
+
+    }
+
+
+    #aulas {
+      padding-left: 80px;
+      padding-top: 1rem;
+      padding-bottom: 2rem;
+      padding-right: 80px;
+
+    }
+
+    #aulas h4 {
+      color: rgb(187, 187, 187);
+      font-size: 1.3rem;
+
+    }
+
+    #aulas a {
+       text-decoration: none;
+       color: #fff;
+    }
+
+    #aulas .conteudos {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      display: flex;
+      flex-direction: row;
+    }
+
+    #aulas .card-content {
+      width: 100%;
+      margin-right: 0rem;
+      color: #fff;
+      display: flex;
+
+    }
+
+    #aulas .card-content img {
+      width: 30%;
+
+      border-radius: 10px;
+    }
+
+
+    #aulas .card-content .intro {
+      padding-left: 1rem;
+      width: 100%;
+    }
+
+    #aulas .card-content .intro span {
+      color: #dadada;
+    }
+
+    #aulas .card-content .intro h3 {
+      font-size: 1.6rem;
+    }
+
+    #aulas .card-content .intro p {
+      padding-top: 1rem;
+      font-weight: 300;
+      width: 90%;
+    }
+
+    #aulas .card-content .intro .buttons .play {
+      padding: .8rem;
+      border-radius: 10px;
+      background: rgba(255,255,255, .2);
+      font-size: 1rem;
+      color: #fff;
+      cursor: pointer;
+      transition: .3s ease-in all;
+    }
+
+    #aulas .card-content .intro .buttons .play:hover {
+      background: #fff;
+      color: #000;
+    }
+
+  #aulas .card-content .intro .buttons {
+    padding-right: 1rem;
+    padding-top: 2rem;
+  }
+
+  @media screen and (max-width: 991px) {
+    #aulas .conteudos {
+      flex-direction: column;
+    }
+
+    #assistidos .aulas {
+      display: flex;
+      flex-direction: column !important;
+    }
+
+  }
+
+  #video {
+    color: #fff;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  #video h1 {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+
+  #conteudos {
+    width: 90%;
+    margin: 0 auto;
+    color: #fff;
+    margin-bottom: 3rem;
+    padding-top: 1rem;
+    
+  }
+
+
+  #conteudos h4 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding-bottom: 1rem;
+  }
+
+  #conteudos .card-content {
+    overflow: hidden;
+    /*width: 70%; */
+    
+  }
+
+  #conteudos .card-content img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .intro {
+    width: 100%;
+    height: 200px;
+    top: 80%;
+    padding: 1rem;
+    box-sizing: border-box;
+    position: absolute;
+    transition:  ease-in .6s, ease-out .6s;
+    color: #fff;
+  }
+
+  .intro h1 {
+    font-size: 1.3rem;
+    padding-top: .5rem;
+  }
+
+  .intro p {
+    visibility: hidden;
+   opacity: 0;
+  }
+
+  .autor {
+    visibility: visible;
+    color: #00e7f9;
+    padding-bottom: .5rem;
+    font-size: .8rem;
+    font-weight: 600;
+  }
+
+  #conteudos .card-content:hover {
+    cursor: pointer;
+  }
+
+  #conteudos .card-content:hover .intro {
+    height: 220px;
+    width: 100%;
+    top: 75%;
+    border-radius: 10px 10px 10px 10px;
+    background-color: rgba(0,0,0, .5);
+
+  }
+
+  
+  #conteudos .card-content:hover p {
+    visibility: visible;
+    opacity: 1;
+    padding-top: 1rem;
+    font-size: .8rem;
+    font-weight: 300;
+  }
+
+  #eps {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  #eps h4 {
+    font-size: 1.5rem;
+    color: #777;
+    font-weight: 600;
+  }
+
+  #eps .episodios {
+
+    width: 100%;
+  }
+
+  #eps .episodios .ep {
+    display: flex;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+
+  #eps .episodios .ep img {
+    width: 70%;
+    border-radius: 10px;
+  }
+
+  #eps .episodios .ep img:hover {
+    transform: scale(1.05);
+    transition: .5s;
+    cursor: pointer;
+  }
+
+  #eps .episodios .ep .badge {
+    background: rgba(255,255,255,.1);
+    width: 20%;
+    text-align: center;
+    padding: 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    padding-top: 12px;
+    transition: .3s;
+    border-radius: 5px;
+  }
+
+  #eps .episodios .ep .badge:hover {
+    background: rgba(255,255,255,.2);
+    cursor: pointer;
+  }
+
+  #eps .episodios .ep .badge p {
+    font-weight: 700;
+    color: #dadada;
+    font-size: .8rem;
+  }
+
+  #eps .episodios .ep h5 {
+    font-size: 1.2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: rgb(148, 146, 146);
+    transition: .4s;
+  }
+
+  #eps .episodios .ep h5:hover {
+    color: #fff;
+    cursor: pointer;
+  }
+
+  #eps .episodios .ep p {
+    color: #dadada;
+    font-size: 1.1rem;
+    font-weight: 300;
+  }
+
+
+
+  @media screen and (max-width: 991px) {
+
+    #eps h4 {
+      padding-top: 5rem;
+    }
+
+    #eps .episodios {
+      width: 100%;
+      padding-top: 5rem;
+    }
+
+    #eps .episodios .ep .badge {
+      width: 30%;
+    }
+
+    #eps .episodios .ep {
+      flex-direction: column;
+    }
+
+    #conteudos .card-content .intro {
+      top: 60%;
+    }
+
+    #conteudos .card-content:hover .intro {
+      top: 50%;
+    }
+
+
+  }
+
+  #trilhas {
+    color: #fff;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    z-index: 999;
+  }
+
+  #trilhas h3 {
+    color: #dadada;
+    font-size: 1.5rem;
+  }
+
+  #trilhas .trilhas {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    transition: .5s;
+  }
+
+  #trilhas .trilhas .card-content {
+    background: rgba(255,255,255,.05);
+    padding: 2rem;
+    width: 30%;
+   
+    border-radius: 10px;
+  }
+
+  #trilhas .trilhas .card-content h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #7601e0;
+  }
+
+  #trilhas .trilhas .card-content p {
+    padding-top: 1rem;
+  }
+
+  #trilhas .trilhas .card-content button {
+    border:1px solid #fff;
+    background: transparent;
+    padding: .8rem;
+    color: #fff;
+    border-radius: 10px;
+    margin-top: 1.5rem;
+    font-weight: 500;
+    transition: .5s;
+  }
+
+  #trilhas .trilhas .card-content button:hover {
+    color: #00e7f9;
+    border: 1px solid #00e7f9;
+    cursor: pointer;
+  }
+
+  footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 0;
+  }
+
+  footer .container .logo {
+    text-align: left
+  }
+
+  footer .logo img {
+    width: 20%;
+  }
+
+  footer p {
+    color: #fff;
+  }
+
+  @media screen and (max-width: 991px) {
+
+    #trilhas .trilhas {
+      flex-direction: column;
+    }
+
+    #trilhas .trilhas .card-content {
+      margin-bottom: 2rem;
+      width: 100%;
+    }
+
+
+
+    footer .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    footer .container .logo {
+      text-align: center;
+    }
+
+    footer .container .logo img {
+      width: 20%;
+    }
+
+    footer .container p {
+      font-size: .9rem;
+      padding-top: 1rem;
+    }
+
+  }
+
+  .img-fluid {
+    max-width: 100%;
+    margin: 0 auto;
+  }
